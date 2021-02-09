@@ -18,7 +18,7 @@ namespace Business.Concrete
 
         public List<Car> GetAll()
         {
-            return _carDal.GetAll();
+            return _carDal.GetAll(); 
         }
 
         public void Add(Car car) 
