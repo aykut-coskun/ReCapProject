@@ -16,7 +16,7 @@ namespace DataAccess.Concrete.EntityFramework
 
         public void Delete(Color car)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); 
         }
 
         public Color Get(Expression<Func<Color, bool>> filter)
