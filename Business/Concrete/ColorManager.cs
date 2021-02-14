@@ -32,7 +32,7 @@ namespace Business.Concrete
 
         public Color GetById(int colorId)
         {
-            return _colorDal.Get(c=>c.ColorId==colorId);
+            return _colorDal.Get(c=>c.ColorId==colorId); 
         }
     }
 }

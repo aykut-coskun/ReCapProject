@@ -31,7 +31,7 @@ namespace DataAccess.Concrete.EntityFramework
 
         public void Update(Brand car)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); 
         }
     }
 }

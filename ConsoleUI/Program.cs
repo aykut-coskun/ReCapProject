@@ -9,6 +9,8 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Tüm araç listesi");
+
             CarManager carManager = new CarManager(new EfCarDal());
             foreach (var car in carManager.GetAll())
             {
@@ -16,17 +18,18 @@ namespace ConsoleUI
             }
             
 
-            Console.WriteLine("---------------------");
 
+            Console.WriteLine("Marka Id'si 2 olan araç listesi");
 
             CarManager carManager2 = new CarManager(new EfCarDal());
             foreach (var car in carManager2.GetCarsByBrandId(2))
             {
                 Console.WriteLine("Modelyılı {0} Marka {1} Günlük Fiyatı {2} Tanımı {3}", car.ModelYear, car.BrandId, car.DailyPrice, car.Description);
             }
-           
 
-            Console.WriteLine("---------------------");
+
+
+            Console.WriteLine("Renk Id'si 1 olan araç listesi");
 
             CarManager carManager3 = new CarManager(new EfCarDal());
             foreach (var car in carManager2.GetCarsByColorId(1))
@@ -34,10 +37,11 @@ namespace ConsoleUI
                 Console.WriteLine("Modelyılı {0} Marka {1} Günlük Fiyatı {2} Tanımı {3}", car.ModelYear, car.BrandId, car.DailyPrice, car.Description);
             }
 
-            Console.WriteLine("---------------------");
+
+            Console.WriteLine("Yeni araç ekleme ve araç listesi");
 
             CarManager carManager1 = new CarManager(new EfCarDal());
-            carManager1.Add(new Entities.Concrete.Car { CarId = 6, BrandId = 5, ColorId = 1, ModelYear = 2021, DailyPrice = 1000, Description = "Lamborghini Aventador" });
+            carManager1.Add(new Entities.Concrete.Car { CarId = 7, BrandId = 5, ColorId = 2, ModelYear = 2020, DailyPrice = 1100, Description = "Lamborghini Gallardo " });
 
             foreach (var car in carManager1.GetAll()) 
             {
